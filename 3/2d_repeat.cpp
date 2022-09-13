@@ -2,19 +2,19 @@
 using namespace std;
 
 int _2d[5][5] = {
-                    {11, 12, 13, 0, 15},
+                    {11, 12, 13, 10, 15},
                     {21, 11, 23, 24, 25},
                     {55, 12, 33, 34, 35},
                     {41, 42, 43, 55, 45},
-                    {51, 0, 53, 54, 55}
+                    {51, 10, 11, 54, 55}
                 };
 
 
-bool cmp(int data){
+bool cmp(int e){
     int count = 0; 
     for(int i = 0; i < 5; i++){
         for(int j = 0; j < 5; j++){
-            if(data == _2d[i][j]){
+            if(e == _2d[i][j]){
                 count++;
             }
             if(count>1){
@@ -28,7 +28,7 @@ bool cmp(int data){
 int main()
 {
     int size = 0;
-    int repeats[25];
+    int repeats[15] = {0};
 
     for(int i = 0; i < 5; i++){
         for(int j = 0; j < 5; j++){
@@ -41,8 +41,7 @@ int main()
                 }
             }
             if(chk){
-                repeats[size] = _2d[i][j];
-                size++;
+                repeats[size++] = _2d[i][j];
             }
           }
         }
