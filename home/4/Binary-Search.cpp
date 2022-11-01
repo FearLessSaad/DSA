@@ -4,7 +4,9 @@ using namespace std;
 int main(){
 
     int arr[15] = {1, 2, 44, 56, 67, 89, 100, 102, 130, 155, 167, 189, 199, 200, 222};
+
     int first = 0, last = 14, x;
+
     int mid = (first + last) / 2;
 
     cout<<"Enter Digit For Find >> ";
@@ -21,7 +23,7 @@ int main(){
         }else if(x < arr[mid]){
             last = mid -1;
             mid = (first + last) / 2;
-        }if(first > last){
+        }if(first >= last){
             cout<<"Entered Digit Is Not Found In Array."<<endl;
         }
 
